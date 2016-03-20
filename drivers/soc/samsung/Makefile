@@ -55,5 +55,8 @@ obj-$(CONFIG_ARCH_EXYNOS)	+= secmem.o
 # HDCP driver
 obj-$(CONFIG_EXYNOS_HDCP2)	+= exynos-hdcp/
 
+# State Notifier
+obj-$(CONFIG_STATE_NOTIFIER)	+= state_notifier.o
+
 #incell
 obj-$(CONFIG_SEC_INCELL) += sec_incell.o
