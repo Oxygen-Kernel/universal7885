@@ -154,7 +154,7 @@ ext4_read_inode_bitmap(struct super_block *sb, ext4_group_t block_group)
 
 	ext4_lock_group(sb, block_group);
 	if (ext4_has_group_desc_csum(sb) &&
-		(desc->bg_flags & cpu_to_le16(EXT4_BG_INODE_UNINIT))) {
+	    (desc->bg_flags & cpu_to_le16(EXT4_BG_INODE_UNINIT))) {
 		if (block_group == 0) {
 			ext4_unlock_group(sb, block_group);
 			unlock_buffer(bh);
