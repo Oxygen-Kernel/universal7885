@@ -2505,7 +2505,7 @@ static int xfrm_user_rcv_msg(struct sk_buff *skb, struct nlmsghdr *nlh)
 	/* google goldfish patch : for CTS fix with 32bit platform.
 	   https://android-review.googlesource.com/c/kernel/goldfish/+/851054 */
 	if (is_compat_task())
-		return -ENOTSUPP;
+		return -EOPNOTSUPP;
 #else
 	if (is_compat_task() && net) {
 		pr_info("%s: pass netlink msg of 32bit platform\n", __func__);
