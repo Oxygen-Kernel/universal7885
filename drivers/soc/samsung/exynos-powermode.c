@@ -664,7 +664,7 @@ store_one(cpd, cpd_enabled);
 
 attr_rw(cpd);
 #else
-static ssize_t store_cpd_enabled(struct kobject *kobj, struct attribute *attr,
+static ssize_t store_cpd_enabled(struct kobject *kobj, struct kobj_attribute *attr,
 				const char *buf, size_t count)
 {
 	unsigned int cpd[CONFIG_NR_CLUSTERS];
@@ -683,7 +683,7 @@ static ssize_t store_cpd_enabled(struct kobject *kobj, struct attribute *attr,
 	return count;
 }
 static ssize_t show_cpd_enabled(struct kobject *kobj,
-				struct attribute *attr, char *buf)
+				struct kobj_attribute *attr, char *buf)
 {
 	ssize_t count = 0;
 	int i = 0;
@@ -697,7 +697,7 @@ static ssize_t show_cpd_enabled(struct kobject *kobj,
 
 	return count;
 }
-static struct global_attr cpd =
+static struct kobj_attribute cpd =
 __ATTR(cpd, 0644, show_cpd_enabled, store_cpd_enabled);
 #endif
 show_one(sicd, sicd_enabled);
