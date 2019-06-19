@@ -111,3 +111,15 @@ all.config
 
 # Kdevelop4
 *.kdev4
+
+# Extra stuff to ignore
+firmware/abov/a96t326_a5y18.fw
+firmware/abov/a96t326_a5y18_can.fw
+firmware/abov/a96t326_a7y18.fw
+firmware/ssp_crashed.fw
+firmware/ssp_stmf410_a2018.fw
+firmware/ssp_stmf410_a2018_O.fw
+firmware/ssp_stmf410_a2018_P.fw
+firmware/tsp_sec/y661_a5y18.fw
+firmware/tsp_sec/y661_a7y18.fw
+scripts/fmp/__pycache__/
