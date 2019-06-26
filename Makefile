@@ -671,6 +671,9 @@ KBUILD_CFLAGS   += -O2
 endif
 endif
 
+# Tune for cortex A53 and A73
+KBUILD_CFLAGS	+= -mtune=cortex-a73.cortex-a53 -mcpu=cortex-a73.cortex-a53
+
 # Tell gcc to never replace conditional load with a non-conditional one
 KBUILD_CFLAGS	+= $(call cc-option,--param=allow-store-data-races=0)
 
